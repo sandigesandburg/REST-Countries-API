@@ -1,0 +1,73 @@
+# Frontend Mentor - REST Countries API with color theme switcher solution
+
+This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor.](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca) This is my first project with HTML, CSS and Javascript.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- See all countries from the API on the homepage
+- Search for a country using an `input` field
+- Filter countries by region
+- Click on a country to see more detailed information on a separate page
+- Click through to the border countries on the detail page
+- Toggle the color scheme between light and dark mode _(optional)_
+
+### Screenshot
+
+![](./screenshots/desktop-design-home-light.png)
+
+![](./screenshots/mobile-design-detail-dark.png)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Javacript
+
+### What I learned
+
+- Flexbox and Grid Container
+- fetch API for REST
+- local and session Storage, URL parameter
+- Media Queries
+
+### Continued development
+
+- use of TypeScript
+- automatic testing
+- Flexbox: rearranging of items of different widths to fit space properly (Tabs for Border Countries)
+- safer use of variables (strict typing, etc.)
+- extend hover and state Animations
+- async fetch handling
+
+### Useful resources
+
+- [Original REST Country Project](https://restcountries.com/)
+
+## Author
+
+- Frontend Mentor - [sandigesandburg](https://www.frontendmentor.io/profile/sandigesandburg)
+
+## Acknowledgments
+
+Special Thanks to the YouTube Cummunity and Stack Overflow. =)
