@@ -142,10 +142,6 @@ body {
   flex-direction: column;
 }
 
-.dropdown:hover {
-  box-shadow: var(--box-shadow);
-}
-
 .dropdown * {
   cursor: pointer;
 }
@@ -159,6 +155,10 @@ body {
   height: var(--height);
   justify-content: space-between;
   width: 200px;
+}
+
+.dropdown .select:hover {
+  box-shadow: var(--box-shadow);
 }
 
 .dropdown .selected {
