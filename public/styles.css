@@ -260,6 +260,10 @@ body {
   margin-bottom: 14px;
 }
 
+.country-tile .property {
+  display: flex;
+}
+
 .country-tile .propertyName {
   font-size: 14px;
   font-weight: 300;
