@@ -7,6 +7,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
+  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -34,6 +35,11 @@ Users should be able to:
 
 ![](./screenshots/mobile-design-detail-dark.png)
 
+### Links
+
+- Solution URL: [GitHub](https://github.com/sandigesandburg/REST-Countries-API)
+- Live Site URL: [GitHub Pages](https://sandigesandburg.github.io/REST-Countries-API/public/index.html)
+
 ## My process
 
 ### Built with
@@ -55,10 +61,9 @@ Users should be able to:
 
 - use of TypeScript
 - automatic testing
-- Flexbox: rearranging of items of different widths to fit space properly (Tabs for Border Countries)
-- safer use of variables (strict typing, etc.)
+- rearranging of items of different widths to fit space properly (Tabs for Border Countries)
 - extend hover and state Animations
-- async fetch handling
+- properly async fetch handling
 
 ### Useful resources
 
