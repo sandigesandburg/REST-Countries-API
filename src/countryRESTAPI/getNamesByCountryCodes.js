@@ -3,7 +3,7 @@
 import { fetchApi } from './fetchApi.js';
 import { REST_API_DOMAIN_NAME as domainName } from '../environmentVariables.js';
 
-async function getNamesByCountryCodes(countryCodes) {
+export async function getNamesByCountryCodes(countryCodes) {
   if (countryCodes.length === 0) return [];
 
   const codes = countryCodes.join(',');
@@ -11,5 +11,3 @@ async function getNamesByCountryCodes(countryCodes) {
   const countries = await fetchApi(url);
   return countries.map((country) => country.name.common).sort();
 }
-
-export { getNamesByCountryCodes };

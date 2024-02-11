@@ -1,6 +1,6 @@
 'use strict';
 
-function initDarkMode() {
+export function initDarkMode() {
   const toggle = document.querySelector('#darkMode');
 
   if (localStorage.getItem('darkMode') === 'enabled') {
@@ -26,5 +26,3 @@ const disableDarkMode = () => {
   document.body.classList.remove('darkmode');
   localStorage.setItem('darkMode', 'disabled');
 };
-
-export { initDarkMode };

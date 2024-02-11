@@ -1,13 +1,8 @@
 'use strict';
 
-import { createCountryGrid } from '../countryGrid/countryGrid.js';
+import { createCountryGrid } from './countryGrid.js';
 
-function initSearchBar(countryDataCollection) {
-  initSearchField(countryDataCollection);
-  initSearchButton(countryDataCollection);
-}
-
-function initSearchField(countryDataCollection) {
+export function initSearchBar(countries) {
   if (!('searchedValue' in sessionStorage)) {
     sessionStorage.setItem('searchedValue', '');
   }
@@ -20,18 +15,14 @@ function initSearchField(countryDataCollection) {
     if (event.key === 'Enter' || event.keyCode === 13) {
       searchField.lastValue = searchField.value;
       sessionStorage.setItem('searchedValue', searchField.value.toString());
-      createCountryGrid(countryDataCollection);
+      createCountryGrid(countries);
     }
   });
-}
 
-function initSearchButton(countryDataCollection) {
   const button = document.querySelector('#searchButton ');
   button.addEventListener('click', () => {
     searchField.lastValue = searchField.value;
     sessionStorage.setItem('searchedValue', searchField.value.toString());
-    createCountryGrid(countryDataCollection);
+    createCountryGrid(countries);
   });
 }
-
-export { initSearchBar };

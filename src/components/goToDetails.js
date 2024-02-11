@@ -2,10 +2,8 @@
 
 import { DETAIL_URL } from '../environmentVariables.js';
 
-function goToCountryDetailsPage(countryName) {
+export function goToDetails(countryName) {
   const urlParams = new URLSearchParams();
   urlParams.set('country', countryName);
   location.assign(DETAIL_URL + '?' + urlParams.toString());
 }
-
-export { goToCountryDetailsPage };

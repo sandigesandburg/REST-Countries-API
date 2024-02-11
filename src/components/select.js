@@ -1,8 +1,8 @@
 'use strict';
 
-import { createCountryGrid } from '../countryGrid/countryGrid.js';
+import { createCountryGrid } from './countryGrid.js';
 
-function initRegionSelection(countryDataCollection) {
+export function initRegionSelection(countries) {
   const select = document.querySelector('#regionSelect');
   const caret = document.querySelector('#caret');
   const menu = document.querySelector('#menu');
@@ -15,7 +15,6 @@ function initRegionSelection(countryDataCollection) {
   select.value = sessionStorage.getItem('selectedRegion');
 
   select.addEventListener('click', () => {
-    select.classList.toggle('select-clicked');
     caret.classList.toggle('caret-rotate');
     menu.classList.toggle('menu-open');
   });
@@ -30,6 +29,7 @@ function initRegionSelection(countryDataCollection) {
       caret.classList.remove('caret-rotate');
       menu.classList.remove('menu-open');
       select.value = '';
+
       options.forEach((option) => option.classList.remove('active'));
 
       if (clickedOption !== 'active') {
@@ -38,9 +38,7 @@ function initRegionSelection(countryDataCollection) {
       }
 
       sessionStorage.setItem('selectedRegion', select.value);
-      createCountryGrid(countryDataCollection);
+      createCountryGrid(countries);
     });
   });
 }
-
-export { initRegionSelection };

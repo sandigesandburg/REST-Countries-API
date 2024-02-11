@@ -1,32 +1,31 @@
 'use strict';
 
-function createCountryTile(countryData) {
+export function createCountryTile(country) {
   const flag = document.createElement('img');
   flag.className = 'country-flag';
-  flag.src = countryData.flags.png;
-  flag.alt = countryData.flags.alt;
+  flag.src = country.flagSrc;
+  flag.alt = country.flagAlt;
 
   const tile = document.createElement('div');
   tile.className = 'country-tile';
-  tile.value = countryData.name.common;
+  tile.value = country.commonName;
   tile.append(flag);
-  tile.append(createCountryDetailsElement(countryData));
+  tile.append(createCountryDetailsElement(country));
   return tile;
 }
 
-function createCountryDetailsElement(countryData) {
-  const population = Intl.NumberFormat('en-US').format(countryData.population);
+function createCountryDetailsElement(country) {
   const block = document.createElement('div');
   block.className = 'details';
 
   const head = document.createElement('div');
   head.className = 'country-name';
-  head.innerText = countryData.name.common;
+  head.innerText = country.commonName;
 
   block.append(head);
-  block.append(createPropertyElement('Population', population));
-  block.append(createPropertyElement('Region', countryData.region));
-  block.append(createPropertyElement('Capital', countryData.capital[0]));
+  block.append(createPropertyElement('Population', country.population));
+  block.append(createPropertyElement('Region', country.region));
+  block.append(createPropertyElement('Capital', country.capital));
   return block;
 }
 
@@ -46,5 +45,3 @@ function createPropertyElement(name, value) {
 
   return property;
 }
-
-export { createCountryTile };
